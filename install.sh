@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-REPO="https://raw.githubusercontent.com/lorenzodevup/quidoc.cli/master/"
+REPO="https://raw.githubusercontent.com/lorenzodevup/quidoc.cli/master"
 VERSION="v1.0.0"
 PKG="quidoc"
 

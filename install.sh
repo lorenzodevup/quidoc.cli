@@ -31,3 +31,4 @@ sha256sum -c SHA256SUMS --ignore-missing
 
 echo "Installo"
 dpkg -i "$DEB"
+exit 0

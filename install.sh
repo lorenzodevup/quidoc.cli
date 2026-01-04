@@ -20,7 +20,7 @@ if gpg --no-default-keyring \
        2>/dev/null; then
   echo "Firma verificata"
 else
-  echo "Firma NON valida"
+  echo "Firma non valida"
   exit 1
 fi
 

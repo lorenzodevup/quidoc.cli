@@ -6,7 +6,7 @@ VERSION="v1.0.0"
 DEB="quidoc_1.0.0_amd64.deb"
 
 echo "🔑 Importo chiave GPG"
-curl -fsSL "$REPO/quidoc.gpg" | gpg --dearmor -o /usr/share/keyrings/quidoc.gpg
+sudo curl -fsSL "$REPO/quidoc.gpg" | gpg --dearmor -o /usr/share/keyrings/quidoc.gpg
 
 echo "📥 Scarico checksum e firma"
 curl -fsSLO "$REPO/releases/$VERSION/SHA256SUMS"

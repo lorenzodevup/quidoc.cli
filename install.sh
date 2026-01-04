@@ -3,7 +3,7 @@ set -e
 
 REPO="https://raw.githubusercontent.com/lorenzodevup/quidoc.cli/master"
 VERSION="v1.0.0"
-DEB="quidoc_1.0.0_amd64.deb"
+DEB="quidoc1.0_amd64.deb"
 KEYRING="/usr/share/keyrings/quidoc.gpg"
 
 echo "🔑 Installo chiave GPG"

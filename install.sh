@@ -5,6 +5,10 @@ REPO="https://raw.githubusercontent.com/lorenzodevup/quidoc.cli/master"
 VERSION="v1.0.0"
 PKG="quidoc"
 
+curl -fsSLO "$REPO/releases/$VERSION/SHA256SUMS"
+curl -fsSLO "$REPO/releases/$VERSION/SHA256SUMS.sig"
+curl -fsSLO "$REPO/releases/$VERSION/quidoc_1.0.0_amd64.deb"
+
 [[ $EUID -eq 0 ]] || { echo "Usa sudo"; exit 1; }
 
 ARCH=$(dpkg --print-architecture)

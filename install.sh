@@ -5,6 +5,8 @@ REPO="https://raw.githubusercontent.com/lorenzodevup/quidoc.cli/master"
 VERSION="v1.0.0"
 PKG="quidoc"
 
+echo 1
+
 [[ $EUID -eq 0 ]] || { echo "Usa sudo"; exit 1; }
 
 ARCH=$(dpkg --print-architecture)
@@ -13,6 +15,8 @@ case "$ARCH" in
   *) echo "Architettura non supportata: $ARCH"; exit 1 ;;
 esac
 
+echo 2
+
 TMP=$(mktemp -d)
 cd "$TMP"
 
@@ -20,6 +24,8 @@ echo "📥 Scarico checksum e firma"
 curl -fsSLO "$REPO/releases/$VERSION/SHA256SUMS"
 curl -fsSLO "$REPO/releases/$VERSION/SHA256SUMS.sig"
 curl -fsSLO "$REPO/quidoc.gpg"
+
+echo 3
 
 echo "🔐 Verifica firma"
 gpg --import quidoc.gpg

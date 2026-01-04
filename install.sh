@@ -14,10 +14,10 @@ curl -fsSLO "$REPO/releases/$VERSION/SHA256SUMS"
 curl -fsSLO "$REPO/releases/$VERSION/SHA256SUMS.sig"
 
 echo "Verifico firma"
-gpg 	--quiet \
-	--no-default-keyring \
+gpg 	--no-default-keyring \
     	--keyring "$KEYRING" \
     	--verify SHA256SUMS.sig SHA256SUMS
+	2>/dev/null
 
 echo "Scarico pacchetto"
 echo "$REPO"

@@ -5,8 +5,8 @@ VERSION="v1.0.0"
 DEB="quidoc_1.0.0_amd64.deb"
 
 echo "📥 Scarico checksum e firma"
-curl -fsSLO "$REPO/SHA256SUMS"
-curl -fsSLO "$REPO/SHA256SUMS.sig"
+curl -fsSLO "$REPO/releases/$VERSION/SHA256SUMS"
+curl -fsSLO "$REPO/release/$VERSION/SHA256SUMS.sig"
 
 echo "🔐 Verifico firma"
 gpg --verify SHA256SUMS.sig SHA256SUMS

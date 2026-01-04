@@ -19,6 +19,9 @@ gpg --no-default-keyring \
     --verify SHA256SUMS.sig SHA256SUMS
 
 echo "📥 Scarico pacchetto"
+echo "$REPO"
+echo "$VERSION"
+echo "$DEB"
 echo "$REPO/releases/$VERSION/$DEB"
 curl -fsSLO "$REPO/releases/$VERSION/$DEB"
 

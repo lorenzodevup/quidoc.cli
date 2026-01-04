@@ -6,10 +6,10 @@ DEB="quidoc_1.0.0_amd64.deb"
 
 echo "📥 Scarico checksum e firma"
 curl -fsSLO "$REPO/SHA256SUMS"
-curl -fsSLO "$REPO/SHA256SUMS.asc"
+curl -fsSLO "$REPO/SHA256SUMS.sig"
 
 echo "🔐 Verifico firma"
-gpg --verify SHA256SUMS.asc SHA256SUMS
+gpg --verify SHA256SUMS.sig SHA256SUMS
 
 echo "📥 Scarico pacchetto"
 curl -fsSLO "$REPO/releases/$VERSION/$DEB"
